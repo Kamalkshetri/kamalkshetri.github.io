@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Kamal Mahatara</title>
+<meta name="description" content="Photos, hobbies, and memories from Kamal Mahatara's journey from Nepal to Australia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand">Kamal Mahatara<span>.</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle menu">☰ MENU</button>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="story.html">My Story</a>
+      <a href="education.html">Education</a>
+      <a href="career.html">Career</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="gallery.html" aria-current="page">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Page 08 / Gallery</span>
+    <h1>Hobbies, Travel & Memories</h1>
+    <p class="lead">A visual scrapbook of the moments that made up my journey — plus a bit about how I spend my time outside of work.</p>
+  </div>
+</section>
+
+<!-- HOBBIES / TRAVEL / COMMUNITY — text sections -->
+<section class="section">
+  <div class="container">
+    <div class="card-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="card">
+        <span class="eyebrow">Hobbies & Interests</span>
+        <h3>What I Do For Fun</h3>
+        <p class="small">Cricket has been a big part of my life since growing up in Gulmi, Nepal, and I still play regularly here in Sydney. [EDIT ME: Add any other hobbies you'd like to include.]</p>
+      </div>
+      <div class="card">
+        <span class="eyebrow">Travel</span>
+        <h3>Places I've Been</h3>
+        <p class="small">My own journey has taken me from Gulmi to Kathmandu, Nepal, and now to Sydney, Australia. [EDIT ME: Add any other places you've traveled to and a favorite memory.]</p>
+      </div>
+      <div class="card">
+        <span class="eyebrow">Community Involvement</span>
+        <h3>Giving Back</h3>
+        <p class="small">[EDIT ME: Describe any community, volunteer, or social initiatives you're part of — e.g. local cricket club, Nepali community groups in Sydney, etc.]</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO GALLERY -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">Photo & Video Gallery</span>
+    <h2>Browse By Category</h2>
+    <p class="small" style="max-width:65ch; margin-bottom:8px;">
+      HOW TO ADD PHOTOS: save your image files into the matching folder inside <code>images/gallery/</code>
+      (e.g. <code>images/gallery/travel/photo1.jpg</code>), then duplicate a <code>&lt;figure&gt;</code> block
+      below and update the <code>src</code> and caption. Empty categories currently show a placeholder note —
+      it will disappear once you add a real photo and matching HTML block.
+    </p>
+
+    <div class="gallery-tabs">
+      <a href="#childhood">Childhood</a>
+      <a href="#school">School</a>
+      <a href="#college">College & Graduation</a>
+      <a href="#family">Family Gatherings</a>
+      <a href="#festivals">Festivals & Culture</a>
+      <a href="#travel">Travel</a>
+      <a href="#weddings">Weddings</a>
+      <a href="#professional">Professional Events</a>
+    </div>
+
+    <h3 id="childhood" class="gallery-category-title">Childhood</h3>
+    <div class="gallery-grid">
+      <figure>
+        <img src="images/gallery/childhood/photo1.jpg" alt="Childhood photo" onerror="this.closest('figure').querySelector('figcaption').textContent='Add photo: images/gallery/childhood/photo1.jpg'; this.remove();">
+        <figcaption>[EDIT ME: Caption]</figcaption>
+      </figure>
+      <figure>
+        <img src="images/gallery/childhood/photo2.jpg" alt="Childhood photo" onerror="this.closest('figure').querySelector('figcaption').textContent='Add photo: images/gallery/childhood/photo2.jpg'; this.remove();">
+        <figcaption>[EDIT ME: Caption]</figcaption>
+      </figure>
+    </div>
+
+    <h3 id="school" class="gallery-category-title">School</h3>
+    <div class="gallery-grid">
+      <figure>
+        <img src="images/gallery/school/photo1.jpg" alt="School photo" onerror="this.closest('figure').querySelector('figcaption').textContent='Add photo: images/gallery/school/photo1.jpg'; this.remove();">
+        <figcaption>[EDIT ME: Caption]</figcaption>
+      </figure>
+    </div>
+
+    <h3 id="college" class="gallery-category-title">College & Graduation</h3>
+    <div class="gallery-grid">
+      <figure>
+        <img src="images/gallery/college/photo1.jpg" alt="College photo" onerror="this.closest('figure').querySelector('figcaption').textContent='Add photo: images/gallery/college/photo1.jpg'; this.remove();">
+        <figcaption>[EDIT ME: Caption]</figcaption>
+      </figure>
+      <figure>
+        <img src="images/gallery/college/photo2.jpg" alt="Graduation ceremony" onerror="this.closest('figure').querySelector('figcaption').textContent='Add photo: images/gallery/college/photo2.jpg'; this.remove();">
+        <figcaption>[EDIT ME: Caption]</figcaption>
+      </figure>
+    </div>
+
+    <h3 id="family" class="gallery-category-title">Family Gatherings</h3>
+    <div class="gallery-grid">
+      <figure>
+        <img src="images/gallery/family/photo1.jpg" alt="Family gathering" onerror="this.closest('figure').querySelector('figcaption').textContent='Add photo: images/gallery/family/photo1.jpg'; this.remove();">
+        <figcaption>[EDIT ME: Caption]</figcaption>
+      </figure>
+    </div>
+
+    <h3 id="festivals" class="gallery-category-title">Festivals & Cultural Events</h3>
+    <div class="gallery-grid">
+      <figure>
+        <img src="images/gallery/festivals/photo1.jpg" alt="Festival" onerror="this.closest('figure').querySelector('figcaption').textContent='Add photo: images/gallery/festivals/photo1.jpg'; this.remove();">
+        <figcaption>[EDIT ME: Caption]</figcaption>
+      </figure>
+    </div>
+
+    <h3 id="travel" class="gallery-category-title">Travel</h3>
+    <div class="gallery-grid">
+      <figure>
+        <img src="images/gallery/travel/photo1.jpg" alt="Travel photo" onerror="this.closest('figure').querySelector('figcaption').textContent='Add photo: images/gallery/travel/photo1.jpg'; this.remove();">
+        <figcaption>[EDIT ME: Caption — e.g. "Hiking in the Alps, 2023"]</figcaption>
+      </figure>
+      <figure>
+        <img src="images/gallery/travel/photo2.jpg" alt="Travel photo" onerror="this.closest('figure').querySelector('figcaption').textContent='Add photo: images/gallery/travel/photo2.jpg'; this.remove();">
+        <figcaption>[EDIT ME: Caption]</figcaption>
+      </figure>
+    </div>
+
+    <h3 id="weddings" class="gallery-category-title">Weddings</h3>
+    <div class="gallery-grid">
+      <figure>
+        <img src="images/gallery/family/wedding1.jpg" alt="Wedding" onerror="this.closest('figure').querySelector('figcaption').textContent='Add photo: images/gallery/family/wedding1.jpg'; this.remove();">
+        <figcaption>[EDIT ME: Caption]</figcaption>
+      </figure>
+    </div>
+
+    <h3 id="professional" class="gallery-category-title">Professional Events</h3>
+    <div class="gallery-grid">
+      <figure>
+        <img src="images/gallery/professional/photo1.jpg" alt="Professional event" onerror="this.closest('figure').querySelector('figcaption').textContent='Add photo: images/gallery/professional/photo1.jpg'; this.remove();">
+        <figcaption>[EDIT ME: Caption — e.g. "Speaking at [Conference], 2024"]</figcaption>
+      </figure>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Kamal Mahatara</h4>
+        <p class="small">ICT Systems Support Officer, working toward Cybersecurity Engineering.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="career.html">Career</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#" title="Add your LinkedIn URL here">LinkedIn (add link)</a></li>
+          <li><a href="mailto:kamalkshetri45@gmail.com">Email</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Kamal Mahatara. All rights reserved.</span>
+      <span>Built with care.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Kamal Mahatara</title>
+<meta name="description" content="Get in touch with Kamal Mahatara.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand">Kamal Mahatara<span>.</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle menu">☰ MENU</button>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="story.html">My Story</a>
+      <a href="education.html">Education</a>
+      <a href="career.html">Career</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Page 10 / Contact</span>
+    <h1>Let's Get In Touch</h1>
+    <p class="lead">Have a question, opportunity, or just want to say hello? Use the form, or reach me directly below.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="card-grid" style="grid-template-columns: 1.2fr 1fr;">
+
+      <div>
+        <p class="form-note">
+          HOW TO MAKE THIS FORM ACTUALLY SEND EMAILS: a plain HTML page can't send email by itself.
+          The easiest free fix is <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a> —
+          sign up, get a form endpoint URL, and paste it into the <code>action="..."</code> attribute below
+          (replace <code>EDIT-ME-FORM-ID</code>). Full steps are also in README.txt.
+        </p>
+
+        <form action="https://formspree.io/f/EDIT-ME-FORM-ID" method="POST">
+          <div class="form-field">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-field">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="_replyto" required>
+          </div>
+          <div class="form-field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject">
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-outline-dark">Send Message →</button>
+        </form>
+      </div>
+
+      <aside>
+        <div class="card">
+          <span class="eyebrow">Direct Contact</span>
+          <ul class="contact-links">
+            <li><span class="k-label">Email</span><a href="mailto:kamalkshetri45@gmail.com">kamalkshetri45@gmail.com</a></li>
+            <li><span class="k-label">Location</span>Sydney, Australia</li>
+            <li><span class="k-label">LinkedIn</span><a href="#" title="Add your LinkedIn URL here">Add link later</a></li>
+            <li><span class="k-label">Portfolio (PDF)</span><a href="resume/Portfolio.pdf" download>Download Portfolio ↓</a></li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Kamal Mahatara</h4>
+        <p class="small">ICT Systems Support Officer, working toward Cybersecurity Engineering.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="career.html">Career</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#" title="Add your LinkedIn URL here">LinkedIn (add link)</a></li>
+          <li><a href="mailto:kamalkshetri45@gmail.com">Email</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Kamal Mahatara. All rights reserved.</span>
+      <span>Built with care.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

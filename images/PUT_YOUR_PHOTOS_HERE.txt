@@ -1,0 +1,37 @@
+PHOTO GUIDE — where each image file should go and what to name it
+=====================================================================
+
+/images/passport-photo.jpg
+    Your main profile photo, shown on the Home page.
+    Portrait orientation (taller than wide) works best.
+
+/images/projects/project1.jpg, project2.jpg, project3.jpg ...
+    Screenshots of your projects, shown on the Projects page.
+
+/images/gallery/childhood/photo1.jpg, photo2.jpg ...
+/images/gallery/school/photo1.jpg ...
+/images/gallery/college/photo1.jpg, photo2.jpg ...
+/images/gallery/family/photo1.jpg ...
+/images/gallery/festivals/photo1.jpg ...
+/images/gallery/travel/photo1.jpg, photo2.jpg ...
+/images/gallery/professional/photo1.jpg ...
+    Your gallery photos, organized by category — shown on the Gallery page.
+
+HOW IT WORKS
+------------
+Every <img> tag in the HTML points to one of these exact file paths.
+Just save your photos into the matching folder with the matching file
+name (e.g. "photo1.jpg") and they'll appear automatically — no code
+changes needed.
+
+Want to add MORE photos than there are slots for?
+1. Open gallery.html (or education.html / career.html / projects.html) in Notepad.
+2. Find a <figure>...</figure> block (or <img> tag) in the category you want.
+3. Copy/paste it, and change the file name and caption in your new copy.
+4. Save the matching photo into the same folder with that new file name.
+
+TIP: Keep photos under ~1–2 MB each (resize large phone photos) so the
+site loads quickly. Any free tool like Squoosh.app or your phone's
+built-in editor can resize/compress images.
+
+Once you've added your real photos, you can delete this text file.

@@ -1,0 +1,7 @@
+Save these two files into this "resume" folder, with these EXACT names:
+
+1. Resume.pdf     → your résumé (linked from the Home and Career pages)
+2. Portfolio.pdf  → your downloadable portfolio (linked from the Contact page)
+
+Once both files are here, delete this text file. Everything will link
+automatically — no HTML editing needed.
