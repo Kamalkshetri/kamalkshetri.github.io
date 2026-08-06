@@ -373,8 +373,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* Gallery 4-column layout */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(4, 1fr); /* Forces 4 columns per row */
+  gap: 16px;                            /* Space between cards */
   margin-bottom: 32px;
 }
 
@@ -382,23 +382,32 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   margin: 0;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .gallery-grid img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 180px;        /* Fixed uniform height for all images */
+  object-fit: cover;     /* Crops neatly without stretching */
   border-radius: 4px;
 }
 
+.gallery-grid figcaption {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--ink-70);
+  text-align: center;
+}
+
+/* Mobile & Tablet Responsiveness */
 @media (max-width: 900px) {
   .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on smaller screens */
   }
 }
 
 @media (max-width: 500px) {
   .gallery-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;            /* 1 per row on mobile */
   }
 }
