@@ -6,19 +6,18 @@
 
 :root{
   /* --- Colors --- */
-  --ink:        #1B2A3A;   /* deep navy — headers, nav, footer */
-  --ink-light:  #2F4256;   /* lighter navy panels */
-  --bone:       #F7F4EE;   /* warm off-white page background */
-  --bone-dark:  #EDE7DA;   /* card / section background */
-  --ochre:      #C98A2E;   /* primary accent (links, buttons) */
+  --ink:        #1B2A3A;
+  --ink-light:  #2F4256;
+  --bone:       #F7F4EE;
+  --bone-dark:  #EDE7DA;
+  --ochre:      #C98A2E;
   --ochre-dark: #A66F1F;
-  --teal:       #3B5B58;   /* secondary accent */
-  --stamp:      #A6432F;   /* "passport stamp" accent for milestones */
-  --line:       #D8D0BE;   /* hairline borders */
+  --teal:       #3B5B58;
+  --stamp:      #A6432F;
+  --line:       #D8D0BE;
   --ink-70:     rgba(27,42,58,0.7);
   --ink-50:     rgba(27,42,58,0.5);
 
-  /* --- Type --- */
   --font-display: 'Fraunces', Georgia, serif;
   --font-body:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono:    'JetBrains Mono', 'Courier New', monospace;
@@ -64,26 +63,4 @@ p{ margin: 0 0 1em; }
   margin-bottom: .6em;
 }
 
-/* Visible keyboard focus everywhere */
-a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
-  outline: 2px solid var(--ochre-dark);
-  outline-offset: 2px;
-}
-
-@media (prefers-reduced-motion: reduce){
-  *{ animation: none !important; transition: none !important; scroll-behavior:auto !important; }
-}
-
-/* =========================================================
-   NAV — "boarding pass" strip
-   ========================================================= */
-.site-header{
-  background: var(--ink);
-  color: var(--bone);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 3px dashed var(--ochre);
-}
-.nav-wrap{
-  max-width: 1080px;
+a:focus-visible, button:focus-visible, input:focus-visible,
