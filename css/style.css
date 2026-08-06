@@ -363,19 +363,25 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
   gap: 22px;
 }
-.card{
+.card {
   background: var(--bone);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 24px;
 }
-.card
+
 /* Gallery 4-column layout */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   margin-bottom: 32px;
+}
+
+.gallery-grid figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .gallery-grid img {
@@ -385,8 +391,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   border-radius: 4px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
   }
 }
