@@ -651,6 +651,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .footer-grid li{ margin-bottom: 8px; }
 .footer-grid a{ color: rgba(247,244,238,.75); }
 .footer-grid a:hover{ color: var(--ochre); }
+.footer-grid a.social-link{ display:inline-flex; align-items:center; gap:8px; }
+.footer-grid a.social-link svg{ width:16px; height:16px; flex-shrink:0; }
 .footer-bottom{
   border-top: 1px solid rgba(247,244,238,.15);
   padding-top: 18px;
