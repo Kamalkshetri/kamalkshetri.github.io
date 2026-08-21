@@ -54,3 +54,89 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.key === 'Escape') closeLightbox();
   });
 });
+
+// Header gets a drop shadow once the page has scrolled a little
+document.addEventListener('DOMContentLoaded', function () {
+  var header = document.querySelector('.site-header');
+  if (!header) return;
+  function onScroll() {
+    header.classList.toggle('scrolled', window.scrollY > 8);
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+});
+
+// Back-to-top button — appears after scrolling down a page
+document.addEventListener('DOMContentLoaded', function () {
+  var btn = document.createElement('button');
+  btn.className = 'back-to-top';
+  btn.type = 'button';
+  btn.setAttribute('aria-label', 'Back to top');
+  btn.innerHTML = '&uarr;';
+  document.body.appendChild(btn);
+
+  function onScroll() {
+    btn.classList.toggle('visible', window.scrollY > 500);
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  btn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
+// Scroll-reveal — fades cards/timeline items/etc. in as they enter view.
+// The .reveal class is only ever added here, so if JS doesn't run,
+// everything just displays normally with no animation.
+document.addEventListener('DOMContentLoaded', function () {
+  if (!('IntersectionObserver' in window)) return;
+
+  var targets = document.querySelectorAll(
+    '.card, .timeline-item, .passport, .quick-link, .testimonial, .faq-item'
+  );
+  if (targets.length === 0) return;
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  targets.forEach(function (el, i) {
+    el.classList.add('reveal');
+    // small stagger within each row/group for a nicer cascade
+    el.style.transitionDelay = (Math.min(i % 6, 5) * 60) + 'ms';
+    io.observe(el);
+  });
+});
+
+// Animate skill bars from 0 to their target width when scrolled into view
+document.addEventListener('DOMContentLoaded', function () {
+  var bars = document.querySelectorAll('.skill-bar-fill');
+  if (bars.length === 0) return;
+
+  bars.forEach(function (bar) {
+    bar.dataset.target = bar.style.width || getComputedStyle(bar).width;
+    bar.style.width = '0';
+  });
+
+  if (!('IntersectionObserver' in window)) {
+    bars.forEach(function (bar) { bar.style.width = bar.dataset.target; });
+    return;
+  }
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.style.width = entry.target.dataset.target;
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  bars.forEach(function (bar) { io.observe(bar); });
+});
