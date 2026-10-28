@@ -127,6 +127,32 @@
   </div>
 </footer>
 
+  <script>
+document.querySelector('form[action*="formspree.io"]').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  const form = e.target;
+  const button = form.querySelector('button[type="submit"]');
+  button.disabled = true;
+  button.textContent = 'Sending...';
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      window.location.href = 'thanks.html';
+    } else {
+      throw new Error('Failed');
+    }
+  } catch (err) {
+    button.disabled = false;
+    button.textContent = 'Send Message →';
+    alert('Sorry, something went wrong. Please email me directly at kamalkshetri45@gmail.com');
+  }
+});
+</script>
+
 <script src="js/script.js"></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
