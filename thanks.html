@@ -34,15 +34,15 @@
 
 <section class="page-hero">
   <div class="container">
-    <span class="eyebrow">Message Sent</span>
-    <h1>Thank You!</h1>
-    <p class="lead">Your message has been sent. I'll get back to you as soon as I can.</p>
+    <span class="eyebrow">Message Received</span>
+    <h1>Thank You for Reaching Out</h1>
+    <p class="lead" id="thanks-message">I have received your message and will be in touch with you soon.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <p>In the meantime, you can explore more of my site.</p>
+    <p>If your message is urgent, you can also reach me directly at <a href="mailto:kamalkshetri45@gmail.com">kamalkshetri45@gmail.com</a> or connect with me on <a href="https://www.linkedin.com/in/kamal-mahatara/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
     <p style="margin-top:24px;">
       <a href="index.html" class="btn btn-outline-dark">← Back to Home</a>
       &nbsp;
@@ -59,6 +59,22 @@
     </div>
   </div>
 </footer>
+
+<script>
+(function () {
+  try {
+    var email = sessionStorage.getItem('contactEmail');
+    var phone = sessionStorage.getItem('contactPhone');
+    if (email && phone) {
+      document.getElementById('thanks-message').textContent =
+        'I have received your message. I will reply to the email address you provided (' + email +
+        ') or call you on ' + phone + '.';
+    }
+    sessionStorage.removeItem('contactEmail');
+    sessionStorage.removeItem('contactPhone');
+  } catch (e) {}
+})();
+</script>
 
 <script src="js/script.js"></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
