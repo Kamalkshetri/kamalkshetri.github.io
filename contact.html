@@ -141,6 +141,10 @@ document.querySelector('form[action*="formspree.io"]').addEventListener('submit'
       headers: { 'Accept': 'application/json' }
     });
     if (res.ok) {
+      try {
+        sessionStorage.setItem('contactEmail', form.querySelector('[name="_replyto"]').value);
+        sessionStorage.setItem('contactPhone', form.querySelector('[name="phone"]').value);
+      } catch (e) {}
       window.location.href = 'thanks.html';
     } else {
       throw new Error('Failed');
